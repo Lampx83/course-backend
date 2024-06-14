@@ -7,7 +7,47 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register(/*{ strapi }*/) {
+    if (strapi.plugin('documentation')) {
+      const override = {
+        paths: {
+          '/blogs/slug/{slug}': {
+            get: {
+              tags: ['Blog'],
+              summary: 'Retrieve a blog by slug',
+              parameters: [
+                {
+                  in: 'path',
+                  name: 'slug',
+                  required: true,
+                  schema: {
+                    type: 'string',
+                  },
+                },
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        $ref: '#/components/schemas/Blog',
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        }
+      }
+
+      strapi
+        .plugin('documentation')
+        .service('override')
+        .registerOverride(override)
+    }
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

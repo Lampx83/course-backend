@@ -76,6 +76,14 @@
       },
       "type": "string",
       "maxLength": 150
+    },
+    "eventDate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "datetime"
     }
   }
 }
