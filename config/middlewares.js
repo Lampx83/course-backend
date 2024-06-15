@@ -1,7 +1,6 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
@@ -17,7 +16,7 @@ module.exports = [
       keepHeaderOnError: true,
     },
   },
-  {
+  /*{
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
@@ -27,5 +26,21 @@ module.exports = [
         }
       }
     }
-  }
+  },*/
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          'default-src': ["'self'", 'http:'],
+          'connect-src': ["'self'", 'http://101.96.66.219:8015', 'https://fit.neu.edu.vn', 'http://fit.neu.edu.vn'],
+          'img-src': ["'self'", 'data:', 'blob:'],
+          'media-src': ["'self'", 'data:', 'blob:'],
+          'frame-ancestors': ["'self'"],
+          'script-src': ["'self'", "'unsafe-inline'", 'http:'],
+          'style-src': ["'self'", 'http:', "'unsafe-inline'"],
+        },
+      },
+    },
+  },
 ];

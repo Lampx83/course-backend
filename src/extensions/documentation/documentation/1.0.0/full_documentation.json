@@ -18,11 +18,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-06-15T10:20:12.574Z"
+    "x-generation-date": "2024-06-15T10:43:33.562Z"
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "https://fit.neu.edu.vn/admin/api",
       "description": "Development server"
     }
   ],
