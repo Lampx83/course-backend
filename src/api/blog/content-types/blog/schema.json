@@ -68,14 +68,13 @@
         }
       }
     },
-    "subTitle": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
-      "maxLength": 150
+      "type": "text"
     },
     "eventDate": {
       "pluginOptions": {
