@@ -113,3 +113,6 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+
+/src/extensions/documentation/
+/types/generated/contentTypes.d.ts
