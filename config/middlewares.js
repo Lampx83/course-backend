@@ -10,9 +10,9 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:*', 'http://127.0.0.1:*', 'https://fit-frontend-3y56.vercel.app', 'https://fit.neu.edu.vn'],
+      origin: ['http://localhost:*', 'http://127.0.0.1:*', 'https://fit-frontend-3y56.vercel.app', 'https://fit.neu.edu.vn', 'http://localhost:63342'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'Access-Control-Allow-Origin'],
       keepHeaderOnError: true,
     },
   },
