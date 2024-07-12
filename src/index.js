@@ -39,6 +39,35 @@ module.exports = {
               },
             },
           },
+          '/majors/slug/{slug}': {
+            get: {
+              tags: ['Major'],
+              summary: 'Retrieve a major by slug',
+              parameters: [
+                {
+                  in: 'path',
+                  name: 'slug',
+                  required: true,
+                  schema: {
+                    type: 'string',
+                  },
+                },
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        $ref: '#/components/schemas/Major',
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+
         }
       }
 
