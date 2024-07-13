@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumni_lists",
+  "info": {
+    "singularName": "alumni-list",
+    "pluralName": "alumni-lists",
+    "displayName": "Alumni List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

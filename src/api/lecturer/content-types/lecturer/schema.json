@@ -57,6 +57,14 @@
     "position": {
       "type": "string",
       "required": true
+    },
+    "avatarNew": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

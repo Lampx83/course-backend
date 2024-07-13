@@ -67,7 +67,89 @@ module.exports = {
               },
             },
           },
-
+          '/alumni-lists': {
+            get: {
+              tags: ['Alumni-list'],
+              summary: 'Retrieve alumni lists',
+              parameters: [
+                {
+                  in: 'query',
+                  name: 'limit',
+                  schema: {
+                      type: 'integer',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'ten',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'khoa',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'namTotNghiep',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'nganhDaoTao',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'next',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'sortBy',
+                  schema: {
+                    type: 'enum',
+                    enum: ['ho', 'ten', 'khoa', 'namTotNghiep', 'nganhDaoTao'],
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'sortValue',
+                  schema: {
+                    type: 'enum',
+                    enum: ['ascending', 'descending'],
+                  },
+                },
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: Object
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '/alumni-lists/{id}': {
+            get: {},
+            put: {},
+            delete: {}
+          }
         }
       }
 
