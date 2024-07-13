@@ -149,7 +149,90 @@ module.exports = {
             get: {},
             put: {},
             delete: {}
-          }
+          },
+          '/theses': {
+            get: {
+              tags: ['Thesis'],
+              summary: 'Retrieve theses',
+              parameters: [
+                {
+                  in: 'query',
+                  name: 'limit',
+                  schema: {
+                      type: 'integer',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'tenChuyenDe',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'hoTenSV',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'GVHD',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'nam',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'next',
+                  schema: {
+                      type: 'string',
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'sortBy',
+                  schema: {
+                    type: 'enum',
+                    enum: ['tenChuyenDe', 'hoTenSV', 'GVHD', 'nam'],
+                  },
+                },
+                {
+                  in: 'query',
+                  name: 'sortValue',
+                  schema: {
+                    type: 'enum',
+                    enum: ['ascending', 'descending'],
+                  },
+                },
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: Object
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          '/theses/{id}': {
+            get: {},
+            put: {},
+            delete: {}
+          },
         }
       }
 

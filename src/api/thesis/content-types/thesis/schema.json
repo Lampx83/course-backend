@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "theses",
+  "info": {
+    "singularName": "thesis",
+    "pluralName": "theses",
+    "displayName": "Thesis"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
