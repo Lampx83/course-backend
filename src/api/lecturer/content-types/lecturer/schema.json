@@ -25,15 +25,6 @@
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "subjects": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
-    },
     "additionalInfo": {
       "type": "customField",
       "options": {
@@ -50,10 +41,6 @@
       "type": "string",
       "required": true
     },
-    "avatar": {
-      "type": "string",
-      "required": true
-    },
     "position": {
       "type": "string",
       "required": true
@@ -65,6 +52,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "displayName",
+      "required": true
     }
   }
 }

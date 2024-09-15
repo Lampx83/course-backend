@@ -11,6 +11,34 @@ module.exports = {
     if (strapi.plugin('documentation')) {
       const override = {
         paths: {
+          '/lecturers/slug/{slug}': {
+            get: {
+              tags: ['Lecturer'],
+              summary: 'Retrieve a lecturer info by slug',
+              parameters: [
+                {
+                  in: 'path',
+                  name: 'slug',
+                  required: true,
+                  schema: {
+                    type: 'string',
+                  },
+                },
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        $ref: '#/components/schemas/lecturer',
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
           '/blogs/slug/{slug}': {
             get: {
               tags: ['Blog'],
