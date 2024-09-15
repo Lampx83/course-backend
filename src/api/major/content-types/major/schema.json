@@ -85,20 +85,6 @@
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "syllabus": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
-    },
     "graduateOutcomes": {
       "pluginOptions": {
         "i18n": {

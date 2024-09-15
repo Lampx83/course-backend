@@ -57,6 +57,11 @@
       "type": "uid",
       "targetField": "displayName",
       "required": true
+    },
+    "index": {
+      "type": "integer",
+      "required": true,
+      "min": 0
     }
   }
 }
