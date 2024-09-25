@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "index_pages",
+  "info": {
+    "singularName": "index-page",
+    "pluralName": "index-pages",
+    "displayName": "IndexPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "carousel": {
+      "displayName": "Carousel Index Page",
+      "type": "component",
+      "repeatable": true,
+      "component": "index-page.carousel-index-page"
+    }
+  }
+}

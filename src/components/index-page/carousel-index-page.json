@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_index_page_carousel_index_pages",
+  "info": {
+    "displayName": "Carousel Index Page",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "url": {
+      "type": "text"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "buttonText": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
