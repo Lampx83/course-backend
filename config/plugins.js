@@ -4,6 +4,9 @@ module.exports = ({ env }) => ({
       defaultDepth: 10, // Default is 5
     },
   },
+  seo: {
+    enable: true,
+  },
   documentation: {
     enabled: true,
     config: {

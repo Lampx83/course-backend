@@ -17,6 +17,11 @@
       "type": "component",
       "repeatable": true,
       "component": "index-page.carousel-index-page"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
