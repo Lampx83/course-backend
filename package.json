@@ -25,6 +25,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "strapi-plugin-meilisearch": "^0.12.0",
     "strapi-plugin-menus": "^1.6.1",
     "strapi-plugin-navigation": "^2.5.4",
     "strapi-plugin-populate-deep": "^3.0.1",
