@@ -84,16 +84,6 @@
       },
       "type": "datetime"
     },
-    "index": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "unique": false,
-      "default": "0"
-    },
     "pin": {
       "pluginOptions": {
         "i18n": {
