@@ -91,7 +91,7 @@
         }
       },
       "type": "biginteger",
-      "unique": true,
+      "unique": false,
       "default": "0"
     },
     "pin": {
