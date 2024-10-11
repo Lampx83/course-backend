@@ -8,7 +8,7 @@ export interface IndexPageCarouselIndexPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.Text & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     subTitle: Attribute.Text;
     url: Attribute.Text;
     background: Attribute.Media<'images'> & Attribute.Required;
