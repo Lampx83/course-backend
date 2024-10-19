@@ -22,6 +22,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "factBanner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "index-page.info-banner"
     }
   }
 }

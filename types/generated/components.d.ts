@@ -17,6 +17,19 @@ export interface IndexPageCarouselIndexPage extends Schema.Component {
   };
 }
 
+export interface IndexPageInfoBanner extends Schema.Component {
+  collectionName: 'components_index_page_info_banners';
+  info: {
+    displayName: 'FactBanner';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    key: Attribute.String & Attribute.Required;
+    value: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -72,6 +85,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'index-page.carousel-index-page': IndexPageCarouselIndexPage;
+      'index-page.info-banner': IndexPageInfoBanner;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }
