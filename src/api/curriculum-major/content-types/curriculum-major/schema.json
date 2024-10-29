@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curriculum_majors",
+  "info": {
+    "singularName": "curriculum-major",
+    "pluralName": "curriculum-majors",
+    "displayName": "Curriculum.major",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "majorCode": {
+      "type": "uid"
+    },
+    "admissionCode": {
+      "type": "uid"
+    },
+    "enrollmentTarget": {
+      "type": "integer"
+    },
+    "thumbnails": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "introduction": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "graduateOutcomes": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "careerOpportunities": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "syllabus66": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "curriculum_faculty": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum-faculty.curriculum-faculty",
+      "inversedBy": "curriculum_majors"
+    }
+  }
+}
