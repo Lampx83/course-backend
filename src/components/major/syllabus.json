@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_major_syllabi",
+  "info": {
+    "displayName": "Syllabus",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Value": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    }
+  }
+}

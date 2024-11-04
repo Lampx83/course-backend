@@ -60,18 +60,21 @@
       "type": "uid",
       "targetField": "name"
     },
-    "syllabus66": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "rich"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+    "syllabuses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "major.syllabus"
     },
     "curriculum_faculty": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::curriculum-faculty.curriculum-faculty",
+      "inversedBy": "curriculum_majors"
+    },
+    "curriculum_school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum-school.curriculum-school",
       "inversedBy": "curriculum_majors"
     }
   }

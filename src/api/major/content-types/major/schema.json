@@ -171,6 +171,16 @@
         }
       },
       "component": "shared.seo"
+    },
+    "syllabuses": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "major.syllabus"
     }
   }
 }

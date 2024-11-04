@@ -17,6 +17,18 @@ export interface IndexPageCarouselIndexPage extends Schema.Component {
   };
 }
 
+export interface IndexPageImageLibraryItem extends Schema.Component {
+  collectionName: 'components_index_page_image_library_items';
+  info: {
+    displayName: 'Image Library Item';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'> & Attribute.Required;
+  };
+}
+
 export interface IndexPageInfoBanner extends Schema.Component {
   collectionName: 'components_index_page_info_banners';
   info: {
@@ -27,6 +39,26 @@ export interface IndexPageInfoBanner extends Schema.Component {
   attributes: {
     key: Attribute.String & Attribute.Required;
     value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface MajorSyllabus extends Schema.Component {
+  collectionName: 'components_major_syllabi';
+  info: {
+    displayName: 'Syllabus';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Value: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
   };
 }
 
@@ -85,7 +117,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'index-page.carousel-index-page': IndexPageCarouselIndexPage;
+      'index-page.image-library-item': IndexPageImageLibraryItem;
       'index-page.info-banner': IndexPageInfoBanner;
+      'major.syllabus': MajorSyllabus;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

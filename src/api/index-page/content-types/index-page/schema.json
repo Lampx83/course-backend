@@ -27,6 +27,19 @@
       "type": "component",
       "repeatable": true,
       "component": "index-page.info-banner"
+    },
+    "videoThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "imagesLibrary": {
+      "type": "component",
+      "repeatable": true,
+      "component": "index-page.image-library-item"
     }
   }
 }

@@ -32,6 +32,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "curriculum_majors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curriculum-major.curriculum-major",
+      "mappedBy": "curriculum_school"
     }
   }
 }
