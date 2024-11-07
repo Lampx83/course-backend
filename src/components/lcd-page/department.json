@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_lcd_page_departments",
+  "info": {
+    "displayName": "Department",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "members": {
+      "type": "component",
+      "repeatable": true,
+      "component": "lcd-page.member"
+    }
+  }
+}

@@ -42,6 +42,32 @@ export interface IndexPageInfoBanner extends Schema.Component {
   };
 }
 
+export interface LcdPageDepartment extends Schema.Component {
+  collectionName: 'components_lcd_page_departments';
+  info: {
+    displayName: 'Department';
+    icon: 'alien';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    members: Attribute.Component<'lcd-page.member', true>;
+  };
+}
+
+export interface LcdPageMember extends Schema.Component {
+  collectionName: 'components_lcd_page_members';
+  info: {
+    displayName: 'member';
+    icon: 'user';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    position: Attribute.String & Attribute.Required;
+    phone: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface MajorSyllabus extends Schema.Component {
   collectionName: 'components_major_syllabi';
   info: {
@@ -119,6 +145,8 @@ declare module '@strapi/types' {
       'index-page.carousel-index-page': IndexPageCarouselIndexPage;
       'index-page.image-library-item': IndexPageImageLibraryItem;
       'index-page.info-banner': IndexPageInfoBanner;
+      'lcd-page.department': LcdPageDepartment;
+      'lcd-page.member': LcdPageMember;
       'major.syllabus': MajorSyllabus;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;

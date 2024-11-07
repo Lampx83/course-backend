@@ -102,20 +102,6 @@ const schoolData = [
           { "name": "Viện Đào Tạo Quốc Tế", "id": 65 },
           { "name": "Khởi nghiệp và Phát triển Kinh doanh (BBAE)", "id": 66 }
         ]
-      },
-      {
-        "name": "Các chương trình liên kết Quốc tế",
-        "sub_departments": [
-          { "name": "Cử nhân quốc tế IBP@NEU", "id": 67 },
-          { "name": "Cử nhân Quản trị kinh doanh liên kết với ĐH Andrews, Mỹ", "id": 68 },
-          { "name": "Cử nhân quốc tế Kế toán và Tài chính BIFA liên kết với ĐH Cardiff Metropolitan, Anh quốc", "id": 69 },
-          { "name": "Cử nhân Kinh doanh liên kết với ĐH Waikato, New Zealand", "id": 70 },
-          { "name": "Cử nhân Quản trị kinh doanh 2+2 liên kết với ĐH Dongseo, Hàn Quốc", "id": 71 },
-          { "name": "Cử nhân Kinh tế học & Tài chính liên kết 1+2 với ĐH Lincoln, Anh quốc", "id": 72 },
-          { "name": "Liên thông Cử nhân - Thạc sĩ Định phí bảo hiểm và Quản trị rủi ro Actuary liên kết với ĐH Lyon 1, Pháp", "id": 73 },
-          { "name": "Cử nhân Quản trị kinh doanh 2+2 liên kết với ĐH La Trobe, Úc", "id": 74 },
-          { "name": "Cử nhân quốc tế: Digital Marketing liên kết với đại học Leeds Beckett, Anh Quốc", "id": 75 }
-        ]
       }
     ]
   }

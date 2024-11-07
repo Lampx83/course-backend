@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "lcd_pages",
+  "info": {
+    "singularName": "lcd-page",
+    "pluralName": "lcd-pages",
+    "displayName": "LCD-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "index-page.carousel-index-page"
+    },
+    "departments": {
+      "type": "component",
+      "repeatable": true,
+      "component": "lcd-page.department"
+    }
+  }
+}
