@@ -60,11 +60,13 @@ export interface LcdPageMember extends Schema.Component {
   info: {
     displayName: 'member';
     icon: 'user';
+    description: '';
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
     position: Attribute.String & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
+    avatar: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
