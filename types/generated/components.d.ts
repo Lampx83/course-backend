@@ -52,6 +52,14 @@ export interface LcdPageDepartment extends Schema.Component {
   attributes: {
     name: Attribute.String;
     members: Attribute.Component<'lcd-page.member', true>;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
   };
 }
 

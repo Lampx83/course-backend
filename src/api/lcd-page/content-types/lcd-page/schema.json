@@ -21,6 +21,9 @@
       "type": "component",
       "repeatable": true,
       "component": "lcd-page.department"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }
