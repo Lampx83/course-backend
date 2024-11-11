@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::curriculum-major.curriculum-major",
       "mappedBy": "curriculum_school"
+    },
+    "address": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
     }
   }
 }

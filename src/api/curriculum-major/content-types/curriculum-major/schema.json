@@ -76,6 +76,9 @@
       "relation": "manyToOne",
       "target": "api::curriculum-school.curriculum-school",
       "inversedBy": "curriculum_majors"
+    },
+    "credits": {
+      "type": "string"
     }
   }
 }

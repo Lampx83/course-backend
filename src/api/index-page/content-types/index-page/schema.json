@@ -28,13 +28,15 @@
       "repeatable": true,
       "component": "index-page.info-banner"
     },
-    "imagesLibrary": {
-      "type": "component",
-      "repeatable": true,
-      "component": "index-page.image-library-item"
-    },
     "videoThumbnail": {
       "type": "string"
+    },
+    "imagesLibrary": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
