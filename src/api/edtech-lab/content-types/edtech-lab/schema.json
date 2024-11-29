@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "carousel": {
       "type": "component",
       "repeatable": true,
