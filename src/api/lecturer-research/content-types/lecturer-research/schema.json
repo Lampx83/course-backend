@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lecturer_researches",
+  "info": {
+    "singularName": "lecturer-research",
+    "pluralName": "lecturer-researches",
+    "displayName": "Lecturer Research"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

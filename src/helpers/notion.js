@@ -40,10 +40,50 @@ const addSort = (body, sort) => {
     body.sorts.push(sort);
 }
 
+const createSelectFilter = ({ key, value, operation = "equals" }) => {
+  return {
+    property: key,
+    select: {
+      [operation]: value,
+    },
+  };
+};
+
+const createMultiSelectFilter = ({ key, value, operation = "contains" }) => {
+  return {
+    property: key,
+    multi_select: {
+      [operation]: value,
+    },
+  };
+};
+
+const createDateFilter = ({ key, value, operation = "equals" }) => {
+  return {
+    property: key,
+    date: {
+      [operation]: value,
+    },
+  };
+};
+
+const createStatusFilter = ({ key, value, operation = "equals" }) => {
+  return {
+    property: key,
+    status: {
+      [operation]: value,
+    },
+  };
+}
+
 module.exports = {
     addFilter,
     addAndFilter,
     addOrFilter,
     addSubFilter,
-    addSort
+    addSort,
+    createSelectFilter,
+    createMultiSelectFilter,
+    createDateFilter,
+    createStatusFilter
 }
