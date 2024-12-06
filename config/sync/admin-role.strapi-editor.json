@@ -1,0 +1,141 @@
+{
+  "name": "Editor",
+  "code": "strapi-editor",
+  "description": "Biên tập nội dung, không có quyền publish",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::blog-category.blog-category",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blogs"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    }
+  ]
+}

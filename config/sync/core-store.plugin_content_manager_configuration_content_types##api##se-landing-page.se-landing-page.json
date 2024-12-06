@@ -1,0 +1,196 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::se-landing-page.se-landing-page",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "introduction": {
+        "edit": {
+          "label": "introduction",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "introduction",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "admissionMethods": {
+        "edit": {
+          "label": "admissionMethods",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "admissionMethods",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "jobOppertunities": {
+        "edit": {
+          "label": "jobOppertunities",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "jobOppertunities",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "studentFeedbacks": {
+        "edit": {
+          "label": "studentFeedbacks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "studentFeedbacks",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "businessFeedbacks": {
+        "edit": {
+          "label": "businessFeedbacks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "businessFeedbacks",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "admissionMethods",
+        "jobOppertunities",
+        "studentFeedbacks"
+      ],
+      "edit": [
+        [
+          {
+            "name": "introduction",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "admissionMethods",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "jobOppertunities",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "studentFeedbacks",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "businessFeedbacks",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::se-landing-page.se-landing-page"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

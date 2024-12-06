@@ -1,0 +1,236 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::info-page.info-page",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "generalIntroduction": {
+        "edit": {
+          "label": "generalIntroduction",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "generalIntroduction",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "missions": {
+        "edit": {
+          "label": "missions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "missions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "functions": {
+        "edit": {
+          "label": "functions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "functions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "visions": {
+        "edit": {
+          "label": "visions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "visions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "thumbnail": {
+        "edit": {
+          "label": "thumbnail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "thumbnail",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "additionalInfo": {
+        "edit": {
+          "label": "additionalInfo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "additionalInfo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "seo": {
+        "edit": {
+          "label": "seo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "seo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "createdBy"
+      ],
+      "edit": [
+        [
+          {
+            "name": "generalIntroduction",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "missions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "functions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "visions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "thumbnail",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "additionalInfo",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "seo",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::info-page.info-page"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,84 @@
+{
+  "name": "LCD Page",
+  "code": "lcd-page-m36qc5ru",
+  "description": "LCD page",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::lcd-page.lcd-page",
+      "properties": {
+        "fields": [
+          "gallery.title",
+          "gallery.subTitle",
+          "gallery.url",
+          "gallery.background",
+          "gallery.buttonText",
+          "gallery.img",
+          "departments.name",
+          "departments.members.name",
+          "departments.members.position",
+          "departments.members.phone",
+          "departments.members.avatar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::lcd-page.lcd-page",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::lcd-page.lcd-page",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::lcd-page.lcd-page",
+      "properties": {
+        "fields": [
+          "gallery.title",
+          "gallery.subTitle",
+          "gallery.url",
+          "gallery.background",
+          "gallery.buttonText",
+          "gallery.img",
+          "departments.name",
+          "departments.members.name",
+          "departments.members.position",
+          "departments.members.phone",
+          "departments.members.avatar"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::lcd-page.lcd-page",
+      "properties": {
+        "fields": [
+          "gallery.title",
+          "gallery.subTitle",
+          "gallery.url",
+          "gallery.background",
+          "gallery.buttonText",
+          "gallery.img",
+          "departments.name",
+          "departments.members.name",
+          "departments.members.position",
+          "departments.members.phone",
+          "departments.members.avatar"
+        ]
+      },
+      "conditions": []
+    }
+  ]
+}

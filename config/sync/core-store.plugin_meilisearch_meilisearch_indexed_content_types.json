@@ -1,0 +1,10 @@
+{
+  "key": "plugin_meilisearch_meilisearch_indexed_content_types",
+  "value": [
+    "api::blog-category.blog-category",
+    "api::blog.blog"
+  ],
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

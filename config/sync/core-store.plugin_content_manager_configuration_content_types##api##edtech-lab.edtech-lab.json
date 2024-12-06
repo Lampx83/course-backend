@@ -1,0 +1,193 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::edtech-lab.edtech-lab",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "carousel": {
+        "edit": {
+          "label": "carousel",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "carousel",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "videoThumbnail": {
+        "edit": {
+          "label": "videoThumbnail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "videoThumbnail",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "imagesLibrary": {
+        "edit": {
+          "label": "imagesLibrary",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "imagesLibrary",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "introduction": {
+        "edit": {
+          "label": "introduction",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "introduction",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "departments": {
+        "edit": {
+          "label": "departments",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "departments",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "carousel",
+        "videoThumbnail"
+      ],
+      "edit": [
+        [
+          {
+            "name": "carousel",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "videoThumbnail",
+            "size": 6
+          },
+          {
+            "name": "imagesLibrary",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "introduction",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "departments",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::edtech-lab.edtech-lab"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

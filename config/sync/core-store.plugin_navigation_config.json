@@ -1,0 +1,97 @@
+{
+  "key": "plugin_navigation_config",
+  "value": {
+    "additionalFields": [
+      {
+        "name": "target",
+        "label": "Target",
+        "type": "select",
+        "required": false,
+        "multi": false,
+        "options": [
+          "_blank",
+          "_self",
+          "_parent",
+          "_top"
+        ],
+        "enabled": true
+      },
+      {
+        "name": "icon",
+        "label": "Icon",
+        "type": "media",
+        "required": false,
+        "multi": false,
+        "options": [],
+        "enabled": true
+      },
+      {
+        "name": "color",
+        "label": "Color",
+        "type": "string",
+        "required": false,
+        "multi": false,
+        "options": [],
+        "enabled": true
+      },
+      {
+        "type": "select",
+        "name": "itemType",
+        "label": "Item Type",
+        "required": true,
+        "options": [
+          "button",
+          "link"
+        ],
+        "multi": false,
+        "enabled": true
+      }
+    ],
+    "contentTypes": [
+      "api::blog.blog",
+      "api::alumni-list.alumni-list",
+      "api::blog-category.blog-category",
+      "api::major.major",
+      "api::index-page.index-page",
+      "api::contact-infor.contact-infor",
+      "api::thesis.thesis",
+      "api::contact-page.contact-page",
+      "api::info-page.info-page",
+      "api::lecturer.lecturer",
+      "api::subscriber.subscriber"
+    ],
+    "contentTypesNameFields": {
+      "default": [
+        "title",
+        "subject",
+        "name"
+      ]
+    },
+    "contentTypesPopulate": {},
+    "allowedLevels": 3,
+    "gql": {
+      "navigationItemRelated": [
+        "Blog",
+        "AlumniList",
+        "BlogCategory",
+        "Major",
+        "IndexPage",
+        "ContactInfor",
+        "Thesis",
+        "ContactPage",
+        "InfoPage",
+        "Lecturer",
+        "Subscriber"
+      ]
+    },
+    "i18nEnabled": false,
+    "pruneObsoleteI18nNavigations": false,
+    "pathDefaultFields": {},
+    "cascadeMenuAttached": true,
+    "isCacheEnabled": false,
+    "preferCustomContentTypes": false
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

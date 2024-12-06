@@ -1,0 +1,7 @@
+{
+  "key": "plugin_meilisearch_meilisearch_host",
+  "value": "http://127.0.0.1:8003",
+  "type": "string",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,28 @@
+{
+  "key": "core_admin_project-settings",
+  "value": {
+    "menuLogo": {
+      "name": "Logo FIT (1).png",
+      "hash": "Logo_FIT_1_f739dfff38",
+      "url": "/uploads/Logo_FIT_1_f739dfff38.png",
+      "width": 512,
+      "height": 512,
+      "ext": ".png",
+      "size": 78.83,
+      "provider": "local"
+    },
+    "authLogo": {
+      "name": "Logo FIT (1).png",
+      "hash": "Logo_FIT_1_d89ed7a7e9",
+      "url": "/uploads/Logo_FIT_1_d89ed7a7e9.png",
+      "width": 512,
+      "height": 512,
+      "ext": ".png",
+      "size": 78.83,
+      "provider": "local"
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

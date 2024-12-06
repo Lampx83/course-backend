@@ -1,0 +1,522 @@
+{
+  "name": "Publisher",
+  "code": "publisher-lxm34tkv",
+  "description": "Tạo nội dung, publish bài trên một số category cụ thể",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::blog-category.blog-category",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blogs"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate",
+          "pin",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate",
+          "pin",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::blog.blog",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "blog_category",
+          "content",
+          "thumbnail",
+          "description",
+          "eventDate",
+          "pin",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::contact-infor.contact-infor",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::contact-infor.contact-infor",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::contact-infor.contact-infor",
+      "properties": {
+        "fields": [
+          "fullName",
+          "phone",
+          "email",
+          "subject",
+          "message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::featured-student.featured-student",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "avatar",
+          "slug",
+          "index",
+          "display",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::featured-student.featured-student",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::featured-student.featured-student",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::featured-student.featured-student",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "avatar",
+          "slug",
+          "index",
+          "display",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::featured-student.featured-student",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "avatar",
+          "slug",
+          "index",
+          "display",
+          "seo.metaTitle",
+          "seo.metaDescription",
+          "seo.metaImage",
+          "seo.metaSocial.socialNetwork",
+          "seo.metaSocial.title",
+          "seo.metaSocial.description",
+          "seo.metaSocial.image",
+          "seo.keywords",
+          "seo.metaRobots",
+          "seo.structuredData",
+          "seo.metaViewport",
+          "seo.canonicalURL"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::lecturer.lecturer",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "phone",
+          "email",
+          "position",
+          "avatarNew",
+          "slug",
+          "index"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::lecturer.lecturer",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::lecturer.lecturer",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::lecturer.lecturer",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "phone",
+          "email",
+          "position",
+          "avatarNew",
+          "slug",
+          "index"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::lecturer.lecturer",
+      "properties": {
+        "fields": [
+          "displayName",
+          "introduction",
+          "additionalInfo",
+          "phone",
+          "email",
+          "position",
+          "avatarNew",
+          "slug",
+          "index"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::major.major",
+      "properties": {
+        "fields": [
+          "title",
+          "majorCode",
+          "admissionCode",
+          "enrollmentTarget",
+          "thumbnails",
+          "introduction",
+          "graduateOutcomes",
+          "careerOpportunities",
+          "slug",
+          "syllabus66",
+          "syllabus63",
+          "syllabus61"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::major.major",
+      "properties": {
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::major.major",
+      "properties": {
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::major.major",
+      "properties": {
+        "fields": [
+          "title",
+          "majorCode",
+          "admissionCode",
+          "enrollmentTarget",
+          "thumbnails",
+          "introduction",
+          "graduateOutcomes",
+          "careerOpportunities",
+          "slug",
+          "syllabus66",
+          "syllabus63",
+          "syllabus61"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::major.major",
+      "properties": {
+        "fields": [
+          "title",
+          "majorCode",
+          "admissionCode",
+          "enrollmentTarget",
+          "thumbnails",
+          "introduction",
+          "graduateOutcomes",
+          "careerOpportunities",
+          "slug",
+          "syllabus66",
+          "syllabus63",
+          "syllabus61"
+        ],
+        "locales": [
+          "en",
+          "vi"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::subscriber.subscriber",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::subscriber.subscriber",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::subscriber.subscriber",
+      "properties": {
+        "fields": [
+          "email"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::navigation.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    }
+  ]
+}

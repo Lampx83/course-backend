@@ -1,0 +1,130 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::alumni-list.alumni-list.find"
+    },
+    {
+      "action": "api::alumni-list.alumni-list.findOne"
+    },
+    {
+      "action": "api::blog-category.blog-category.find"
+    },
+    {
+      "action": "api::blog-category.blog-category.findOne"
+    },
+    {
+      "action": "api::blog.blog.find"
+    },
+    {
+      "action": "api::blog.blog.findBySlug"
+    },
+    {
+      "action": "api::blog.blog.findOne"
+    },
+    {
+      "action": "api::contact-infor.contact-infor.create"
+    },
+    {
+      "action": "api::contact-page.contact-page.find"
+    },
+    {
+      "action": "api::curriculum-faculty.curriculum-faculty.find"
+    },
+    {
+      "action": "api::curriculum-faculty.curriculum-faculty.findOne"
+    },
+    {
+      "action": "api::curriculum-major.curriculum-major.find"
+    },
+    {
+      "action": "api::curriculum-major.curriculum-major.findOne"
+    },
+    {
+      "action": "api::curriculum-school.curriculum-school.find"
+    },
+    {
+      "action": "api::curriculum-school.curriculum-school.findOne"
+    },
+    {
+      "action": "api::edtech-lab.edtech-lab.find"
+    },
+    {
+      "action": "api::featured-student.featured-student.find"
+    },
+    {
+      "action": "api::featured-student.featured-student.findOne"
+    },
+    {
+      "action": "api::index-page.index-page.find"
+    },
+    {
+      "action": "api::info-page.info-page.find"
+    },
+    {
+      "action": "api::lcd-page.lcd-page.find"
+    },
+    {
+      "action": "api::lecturer-research.lecturer-research.find"
+    },
+    {
+      "action": "api::lecturer.lecturer.find"
+    },
+    {
+      "action": "api::lecturer.lecturer.findBySlug"
+    },
+    {
+      "action": "api::lecturer.lecturer.findOne"
+    },
+    {
+      "action": "api::major.major.find"
+    },
+    {
+      "action": "api::major.major.findBySlug"
+    },
+    {
+      "action": "api::major.major.findOne"
+    },
+    {
+      "action": "api::subscriber.subscriber.create"
+    },
+    {
+      "action": "api::thesis.thesis.find"
+    },
+    {
+      "action": "api::thesis.thesis.findOne"
+    },
+    {
+      "action": "plugin::navigation.client.readAll"
+    },
+    {
+      "action": "plugin::navigation.client.render"
+    },
+    {
+      "action": "plugin::navigation.client.renderChild"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    }
+  ]
+}
