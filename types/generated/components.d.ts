@@ -42,6 +42,49 @@ export interface IndexPageInfoBanner extends Schema.Component {
   };
 }
 
+export interface LandingPagesAdmissionMethods extends Schema.Component {
+  collectionName: 'components_landing_pages_admission_methods';
+  info: {
+    displayName: 'Admission Methods';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    target: Attribute.String & Attribute.Required;
+    criterias: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface LandingPagesFeedbacks extends Schema.Component {
+  collectionName: 'components_landing_pages_feedbacks';
+  info: {
+    displayName: 'Feedbacks';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    info: Attribute.String & Attribute.Required;
+    avatar: Attribute.Media<'images'> & Attribute.Required;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+  };
+}
+
+export interface LandingPagesJobOppertunities extends Schema.Component {
+  collectionName: 'components_landing_pages_job_oppertunities';
+  info: {
+    displayName: 'Job Oppertunities';
+  };
+  attributes: {
+    thumbnail: Attribute.Media<'images'> & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface LcdPageDepartment extends Schema.Component {
   collectionName: 'components_lcd_page_departments';
   info: {
@@ -155,6 +198,9 @@ declare module '@strapi/types' {
       'index-page.carousel-index-page': IndexPageCarouselIndexPage;
       'index-page.image-library-item': IndexPageImageLibraryItem;
       'index-page.info-banner': IndexPageInfoBanner;
+      'landing-pages.admission-methods': LandingPagesAdmissionMethods;
+      'landing-pages.feedbacks': LandingPagesFeedbacks;
+      'landing-pages.job-oppertunities': LandingPagesJobOppertunities;
       'lcd-page.department': LcdPageDepartment;
       'lcd-page.member': LcdPageMember;
       'major.syllabus': MajorSyllabus;
