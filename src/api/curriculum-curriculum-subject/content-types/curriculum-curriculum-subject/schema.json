@@ -43,16 +43,9 @@
       "default": false,
       "required": true
     },
-    "semester_year": {
-      "type": "string",
-      "required": true
-    },
-    "year": {
-      "type": "string",
-      "required": true
-    },
     "semester": {
-      "type": "string"
+      "type": "integer",
+      "required": true
     }
   }
 }
