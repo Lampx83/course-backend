@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curriculum_curriculum_subjects",
+  "info": {
+    "singularName": "curriculum-curriculum-subject",
+    "pluralName": "curriculum-curriculum-subjects",
+    "displayName": "Curriculum.Curriculum_Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "curriculum_curriculum": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum-curriculum.curriculum-curriculum",
+      "inversedBy": "curriculum_curriculum_subjects"
+    },
+    "curriculum_subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum-subject.curriculum-subject",
+      "inversedBy": "curriculum_curriculum_subjects"
+    },
+    "knowledgeBlock": {
+      "type": "enumeration",
+      "enum": [
+        "Chuyên sâu",
+        "Cơ sở ngành",
+        "Học phần chung",
+        "Học phần của ngành",
+        "Học phần của trường",
+        "Kiến thức giáo giục",
+        "Kiến thức ngành",
+        "Thực tập"
+      ],
+      "required": true
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "semester_year": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "string",
+      "required": true
+    },
+    "semester": {
+      "type": "string"
+    }
+  }
+}

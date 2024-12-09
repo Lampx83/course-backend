@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curriculum_curricula",
+  "info": {
+    "singularName": "curriculum-curriculum",
+    "pluralName": "curriculum-curricula",
+    "displayName": "Curriculum.Curriculum",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "curriculum_curriculum_subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curriculum-curriculum-subject.curriculum-curriculum-subject",
+      "mappedBy": "curriculum_curriculum"
+    },
+    "curriculum_major": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curriculum-major.curriculum-major",
+      "inversedBy": "curriculum_curricula"
+    },
+    "year": {
+      "type": "string"
+    }
+  }
+}

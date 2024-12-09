@@ -79,6 +79,12 @@
     },
     "credits": {
       "type": "string"
+    },
+    "curriculum_curricula": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curriculum-curriculum.curriculum-curriculum",
+      "mappedBy": "curriculum_major"
     }
   }
 }

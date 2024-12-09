@@ -49,6 +49,12 @@
       "relation": "manyToMany",
       "target": "api::curriculum-faculty.curriculum-faculty",
       "inversedBy": "curriculum_subjects"
+    },
+    "curriculum_curriculum_subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curriculum-curriculum-subject.curriculum-curriculum-subject",
+      "mappedBy": "curriculum_subject"
     }
   }
 }
