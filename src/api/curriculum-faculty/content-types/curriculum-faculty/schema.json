@@ -44,6 +44,21 @@
       "relation": "manyToMany",
       "target": "api::curriculum-subject.curriculum-subject",
       "mappedBy": "curriculum_faculties"
+    },
+    "websiteFacultyUrl": {
+      "type": "string",
+      "required": true
+    },
+    "addressContactFaculty": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumberContact": {
+      "type": "string"
+    },
+    "mailContact": {
+      "type": "email",
+      "required": true
     }
   }
 }
