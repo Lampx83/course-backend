@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curriculum_subjects",
+  "info": {
+    "singularName": "curriculum-subject",
+    "pluralName": "curriculum-subjects",
+    "displayName": "Curriculum.subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subjectCode": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "credits": {
+      "type": "integer",
+      "required": true
+    },
+    "totalLessons": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "theoryLessons": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "practiceLessons": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "selfLessons": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "curriculum_faculties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curriculum-faculty.curriculum-faculty",
+      "inversedBy": "curriculum_subjects"
+    }
+  }
+}

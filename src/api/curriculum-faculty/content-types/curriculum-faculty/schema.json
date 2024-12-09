@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::curriculum-major.curriculum-major",
       "mappedBy": "curriculum_faculty"
+    },
+    "curriculum_subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curriculum-subject.curriculum-subject",
+      "mappedBy": "curriculum_faculties"
     }
   }
 }
