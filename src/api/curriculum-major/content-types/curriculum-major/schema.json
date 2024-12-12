@@ -10,10 +10,19 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "majorCode": {
       "type": "uid"
@@ -22,7 +31,12 @@
       "type": "uid"
     },
     "enrollmentTarget": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "thumbnails": {
       "type": "media",
@@ -30,7 +44,12 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "introduction": {
       "type": "customField",
@@ -63,7 +82,12 @@
     "syllabuses": {
       "type": "component",
       "repeatable": true,
-      "component": "major.syllabus"
+      "component": "major.syllabus",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "curriculum_faculty": {
       "type": "relation",
@@ -78,7 +102,12 @@
       "inversedBy": "curriculum_majors"
     },
     "credits": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "curriculum_curricula": {
       "type": "relation",
