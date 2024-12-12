@@ -59,6 +59,10 @@
     "mailContact": {
       "type": "email",
       "required": true
+    },
+    "facultyCode": {
+      "type": "uid",
+      "required": true
     }
   }
 }

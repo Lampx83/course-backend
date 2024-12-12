@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "subjectCode": {
-      "type": "string",
-      "required": true
-    },
     "name": {
       "type": "string",
       "required": true
@@ -55,6 +51,18 @@
       "relation": "oneToMany",
       "target": "api::curriculum-curriculum-subject.curriculum-curriculum-subject",
       "mappedBy": "curriculum_subject"
+    },
+    "subjectCode": {
+      "type": "uid",
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "DH"
+      ],
+      "required": true,
+      "default": "DH"
     }
   }
 }

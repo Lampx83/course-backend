@@ -29,6 +29,10 @@
     },
     "year": {
       "type": "string"
+    },
+    "curriculumCode": {
+      "type": "uid",
+      "required": true
     }
   }
 }
