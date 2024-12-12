@@ -63,6 +63,11 @@
       ],
       "required": true,
       "default": "DH"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

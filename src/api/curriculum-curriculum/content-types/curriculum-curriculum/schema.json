@@ -33,6 +33,11 @@
     "curriculumCode": {
       "type": "uid",
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }
