@@ -33,10 +33,12 @@
       "enum": [
         "Chuyên sâu",
         "Cơ sở ngành",
+        "Giáo dục quốc phòng",
+        "Giáo dục thể chất",
         "Học phần chung",
         "Học phần của ngành",
         "Học phần của trường",
-        "Kiến thức giáo giục",
+        "Kiến thức giáo dục",
         "Kiến thức ngành",
         "Thực tập"
       ],
@@ -58,13 +60,21 @@
       }
     },
     "semester": {
-      "type": "integer",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
