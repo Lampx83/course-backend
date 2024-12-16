@@ -28,27 +28,6 @@
       "target": "api::curriculum-subject.curriculum-subject",
       "inversedBy": "curriculum_curriculum_subjects"
     },
-    "knowledgeBlock": {
-      "type": "enumeration",
-      "enum": [
-        "Chuyên sâu",
-        "Cơ sở ngành",
-        "Giáo dục quốc phòng",
-        "Giáo dục thể chất",
-        "Học phần chung",
-        "Học phần của ngành",
-        "Học phần của trường",
-        "Kiến thức giáo dục",
-        "Kiến thức ngành",
-        "Thực tập"
-      ],
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "required": {
       "type": "boolean",
       "default": false,
@@ -69,6 +48,14 @@
       "required": true
     },
     "note": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "knowledgeBlock": {
       "pluginOptions": {
         "i18n": {
           "localized": true
