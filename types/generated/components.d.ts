@@ -118,6 +118,7 @@ export interface LcdPageMember extends Schema.Component {
     position: Attribute.String & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
     avatar: Attribute.Media<'images'> & Attribute.Required;
+    email: Attribute.Email & Attribute.Required;
   };
 }
 
