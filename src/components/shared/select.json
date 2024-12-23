@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_selects",
+  "info": {
+    "displayName": "select",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

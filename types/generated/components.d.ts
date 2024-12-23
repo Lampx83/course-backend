@@ -165,6 +165,17 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface SharedSelect extends Schema.Component {
+  collectionName: 'components_shared_selects';
+  info: {
+    displayName: 'select';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
@@ -206,6 +217,7 @@ declare module '@strapi/types' {
       'lcd-page.member': LcdPageMember;
       'major.syllabus': MajorSyllabus;
       'shared.meta-social': SharedMetaSocial;
+      'shared.select': SharedSelect;
       'shared.seo': SharedSeo;
     }
   }
