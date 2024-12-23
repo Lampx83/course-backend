@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edtech_lab_members",
+  "info": {
+    "singularName": "edtech-lab-member",
+    "pluralName": "edtech-lab-members",
+    "displayName": "EdtechLab.Member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

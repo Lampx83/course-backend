@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edtech_lab_seminars",
+  "info": {
+    "singularName": "edtech-lab-seminar",
+    "pluralName": "edtech-lab-seminars",
+    "displayName": "EdtechLab.Seminar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

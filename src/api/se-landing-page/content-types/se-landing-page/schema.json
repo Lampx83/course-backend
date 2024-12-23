@@ -4,7 +4,8 @@
   "info": {
     "singularName": "se-landing-page",
     "pluralName": "se-landing-pages",
-    "displayName": "SE Landing Page"
+    "displayName": "SE Landing Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -44,6 +45,11 @@
       "type": "component",
       "repeatable": true,
       "component": "landing-pages.feedbacks"
+    },
+    "carousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "index-page.carousel-index-page"
     }
   }
 }
