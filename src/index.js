@@ -541,6 +541,69 @@ module.exports = {
             put: {},
             delete: {}
           },
+          '/edtech-lab-members': {
+            get: {
+              tags: ['Edtech-Lab-Member'],
+              summary: 'Retrieve a list of edtech lab members',
+              parameters: [
+                {
+                  in: 'query',
+                  name: 'limit',
+                  schema: {
+                    type: 'integer',
+                    default: 10,
+                  },
+                  description: 'Number of results to return (default: 10)',
+                },
+                {
+                  in: 'query',
+                  name: 'next',
+                  schema: {
+                    type: 'string',
+                  },
+                  description: 'Cursor for pagination',
+                }
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response with a list of edtech lab members',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                        properties: {
+                          results: {
+                            type: 'array',
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                400: {
+                  description: 'Invalid query parameters',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                        properties: {
+                          error: {
+                            type: 'string',
+                            example: 'Invalid date format',
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          '/edtech-lab-members/{id}': {
+            get: {},
+            put: {},
+            delete: {}
+          },
         }
       }
 
