@@ -482,6 +482,23 @@ module.exports = {
                   schema: {
                     type: 'boolean',
                   }
+                },
+                {
+                  in: 'query',
+                  name: 'limit',
+                  schema: {
+                    type: 'integer',
+                    default: 10,
+                  },
+                  description: 'Number of results to return (default: 10)',
+                },
+                {
+                  in: 'query',
+                  name: 'next',
+                  schema: {
+                    type: 'string',
+                  },
+                  description: 'Cursor for pagination',
                 }
               ],
               responses: {
