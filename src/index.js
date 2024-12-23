@@ -471,6 +471,59 @@ module.exports = {
             put: {},
             delete: {}
           },
+          '/edtech-lab-seminars': {
+            get: {
+              tags: ['Edtech-Lab-Seminar'],
+              summary: 'Retrieve a list of edtech lab seminars',
+              parameters: [
+                {
+                  in: 'query',
+                  name: 'isDone',
+                  schema: {
+                    type: 'boolean',
+                  }
+                }
+              ],
+              responses: {
+                200: {
+                  description: 'Successful response with a list of edtech lab seminars',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                        properties: {
+                          results: {
+                            type: 'array',
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                400: {
+                  description: 'Invalid query parameters',
+                  content: {
+                    'application/json': {
+                      schema: {
+                        type: 'object',
+                        properties: {
+                          error: {
+                            type: 'string',
+                            example: 'Invalid date format',
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          '/edtech-lab-seminars/{id}': {
+            get: {},
+            put: {},
+            delete: {}
+          },
         }
       }
 

@@ -76,6 +76,15 @@ const createStatusFilter = ({ key, value, operation = "equals" }) => {
   };
 }
 
+const createCheckBoxFilter = ({ key, value }) => {
+  return {
+    property: key,
+    checkbox: {
+      equals: value,
+    }
+  }
+}
+
 module.exports = {
     addFilter,
     addAndFilter,
@@ -85,5 +94,6 @@ module.exports = {
     createSelectFilter,
     createMultiSelectFilter,
     createDateFilter,
-    createStatusFilter
+    createStatusFilter,
+    createCheckBoxFilter
 }
