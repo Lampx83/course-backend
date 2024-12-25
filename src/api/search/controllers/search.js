@@ -16,7 +16,7 @@ const {esClient} = require("../../../helpers/elasticsearch");
 module.exports = {
   search: async (ctx) => {
     try {
-      const { q, start, size } = ctx.query;
+      const { q, start = 0, size = 10 } = ctx.query;
       let res = [];
       
       const curriculums = await esClient.search({
