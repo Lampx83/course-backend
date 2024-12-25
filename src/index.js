@@ -173,11 +173,6 @@ module.exports = {
               },
             },
           },
-          '/alumni-lists/{id}': {
-            get: {},
-            put: {},
-            delete: {}
-          },
           '/theses': {
             get: {
               tags: ['Thesis'],
@@ -255,11 +250,6 @@ module.exports = {
                 },
               },
             },
-          },
-          '/theses/{id}': {
-            get: {},
-            put: {},
-            delete: {}
           },
           '/lecturer-researches': {
             get: {
@@ -466,11 +456,6 @@ module.exports = {
               },
             },
           },
-          '/lecturer-researches/{id}': {
-            get: {},
-            put: {},
-            delete: {}
-          },
           '/edtech-lab-seminars': {
             get: {
               tags: ['Edtech-Lab-Seminar'],
@@ -536,11 +521,6 @@ module.exports = {
               }
             }
           },
-          '/edtech-lab-seminars/{id}': {
-            get: {},
-            put: {},
-            delete: {}
-          },
           '/edtech-lab-members': {
             get: {
               tags: ['Edtech-Lab-Member'],
@@ -598,11 +578,6 @@ module.exports = {
                 }
               }
             }
-          },
-          '/edtech-lab-members/{id}': {
-            get: {},
-            put: {},
-            delete: {}
           },
         }
       }

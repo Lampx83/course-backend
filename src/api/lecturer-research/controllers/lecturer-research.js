@@ -1,15 +1,20 @@
 'use strict';
 
-const {addAndFilter, addSort, createSelectFilter, createMultiSelectFilter, createDateFilter, createStatusFilter} = require("../../../helpers/notion");
-const {getDatabase} = require("../../../utils/notionRequest");
 /**
- * lecturer-research controller
+ * A set of functions called "actions" for `lecturer-research`
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
-
-module.exports = createCoreController('api::lecturer-research.lecturer-research', ({ strapi }) => ({
-  async find(ctx) {
+const {addAndFilter, createSelectFilter, createStatusFilter, createMultiSelectFilter, createDateFilter, addSort} = require("../../../helpers/notion");
+const {getDatabase} = require("../../../utils/notionRequest");
+module.exports = {
+  // exampleAction: async (ctx, next) => {
+  //   try {
+  //     ctx.body = 'ok';
+  //   } catch (err) {
+  //     ctx.body = err;
+  //   }
+  // }
+  find: async (ctx) => {
     let { name, type, language, fAuthor, cAuthor, oAuthor, status, date, before, after, limit, next, sortBy, sortValue} = ctx.query;
     limit = parseInt(limit || 10);
     const databaseId = process.env.NOTION_DATABASE_LECTURER_RESEARCH || "13f4b65d1cba808e962ac6c2dceb8b78";
@@ -81,10 +86,10 @@ module.exports = createCoreController('api::lecturer-research.lecturer-research'
     }
 
     // if (sortBy && sortValue) {
-      addSort(body, {
-        property: sortBy || "Date",
-        direction: sortValue || "descending"
-      })
+    addSort(body, {
+      property: sortBy || "Date",
+      direction: sortValue || "descending"
+    })
     // }
 
     const res = await getDatabase({
@@ -101,4 +106,4 @@ module.exports = createCoreController('api::lecturer-research.lecturer-research'
     });
     return res;
   }
-}));
+};

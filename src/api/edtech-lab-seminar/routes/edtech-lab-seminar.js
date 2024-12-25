@@ -1,9 +1,22 @@
-'use strict';
-
-/**
- * edtech-lab-seminar router
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::edtech-lab-seminar.edtech-lab-seminar');
+module.exports = {
+  routes: [
+    // {
+    //  method: 'GET',
+    //  path: '/edtech-lab-seminar',
+    //  handler: 'edtech-lab-seminar.exampleAction',
+    //  config: {
+    //    policies: [],
+    //    middlewares: [],
+    //  },
+    // },
+    {
+     method: 'GET',
+     path: '/edtech-lab-seminars',
+     handler: 'edtech-lab-seminar.find',
+     config: {
+       policies: [],
+       middlewares: [],
+     },
+    },
+  ],
+};

@@ -1,0 +1,203 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer",
+          "filter": [
+            "lowercase",
+            "icu_normalizer",
+            "icu_folding",
+            "autocomplete_filter"
+          ]
+        },
+        "text_default": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer",
+          "filter": [
+            "lowercase",
+            "icu_folding",
+            "icu_normalizer"
+          ],
+          "char_filter": [
+            "html_strip"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "entry_name": {
+          "path_match": "name",
+          "mapping": {
+            "type": "text",
+            "analyzer": "text_default",
+            "fields": {
+              "sort": {
+                "type": "icu_collation_keyword",
+                "index": true
+              },
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "properties": {
+      "createdAt" : {
+        "type" : "date"
+      },
+      "curriculumCode" : {
+        "type" : "keyword"
+      },
+      "id" : {
+        "type" : "long"
+      },
+      "locale" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "major" : {
+        "properties" : {
+          "admissionCode" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "careerOpportunities" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "createdAt" : {
+            "type" : "date"
+          },
+          "credits" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "enrollmentTarget" : {
+            "type" : "long"
+          },
+          "graduateOutcomes" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "id" : {
+            "type" : "long"
+          },
+          "introduction" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "locale" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "majorCode" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "name" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "publishedAt" : {
+            "type" : "date"
+          },
+          "slug" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "updatedAt" : {
+            "type" : "date"
+          }
+        }
+      },
+      "publishedAt" : {
+        "type" : "date"
+      },
+      "slug" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "updatedAt" : {
+        "type" : "date"
+      },
+      "year" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      }
+    }
+  }
+}

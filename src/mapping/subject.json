@@ -1,0 +1,285 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer",
+          "filter": [
+            "lowercase",
+            "icu_normalizer",
+            "icu_folding",
+            "autocomplete_filter"
+          ]
+        },
+        "text_default": {
+          "type": "custom",
+          "tokenizer": "icu_tokenizer",
+          "filter": [
+            "lowercase",
+            "icu_folding",
+            "icu_normalizer"
+          ],
+          "char_filter": [
+            "html_strip"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "entry_name": {
+          "path_match": "name",
+          "mapping": {
+            "type": "text",
+            "analyzer": "text_default",
+            "fields": {
+              "sort": {
+                "type": "icu_collation_keyword",
+                "index": true
+              },
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "properties": {
+      "createdAt": {
+        "type": "date"
+      },
+      "credits" : {
+        "type" : "long"
+      },
+      "curriculumGroupName" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "curriculums" : {
+        "properties" : {
+          "createdAt" : {
+            "type" : "date"
+          },
+          "curriculumCode" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "id" : {
+            "type" : "long"
+          },
+          "locale" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "name" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "publishedAt" : {
+            "type" : "date"
+          },
+          "slug" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "updatedAt" : {
+            "type" : "date"
+          },
+          "year" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          }
+        }
+      },
+      "faculties" : {
+        "properties" : {
+          "addressContactFaculty" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "createdAt" : {
+            "type" : "date"
+          },
+          "description" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "facultyCode" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "id" : {
+            "type" : "long"
+          },
+          "locale" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "mailContact" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "name" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "phoneNumberContact" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "publishedAt" : {
+            "type" : "date"
+          },
+          "slug" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "updatedAt" : {
+            "type" : "date"
+          },
+          "websiteFacultyUrl" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          }
+        }
+      },
+      "id" : {
+        "type" : "long"
+      },
+      "level" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "locale" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "practiceLessons" : {
+        "type" : "long"
+      },
+      "publishedAt" : {
+        "type" : "date"
+      },
+      "selfLessons" : {
+        "type" : "long"
+      },
+      "slug" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "subjectCode" : {
+        "type" : "keyword"
+      },
+      "theoryLessons" : {
+        "type" : "long"
+      },
+      "totalLessons" : {
+        "type" : "long"
+      },
+      "updatedAt" : {
+        "type" : "date"
+      }
+    }
+  }
+}

@@ -1,9 +1,22 @@
-'use strict';
-
-/**
- * alumni-list router
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::alumni-list.alumni-list');
+module.exports = {
+  routes: [
+    // {
+    //  method: 'GET',
+    //  path: '/alumni-list',
+    //  handler: 'alumni-list.exampleAction',
+    //  config: {
+    //    policies: [],
+    //    middlewares: [],
+    //  },
+    // },
+    {
+      method: 'GET',
+      path: '/alumni-lists',
+      handler: 'alumni-list.find',
+      config: {
+       policies: [],
+       middlewares: [],
+      },
+    }
+  ],
+};
