@@ -17,6 +17,15 @@ module.exports = {
         policies: [],
         middlewares: [],
       },
-    }
+    },
+    {
+      method: 'GET',
+      path: '/search/curriculum',
+      handler: 'search.searchCurriculum',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
