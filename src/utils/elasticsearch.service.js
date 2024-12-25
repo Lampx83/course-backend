@@ -231,30 +231,6 @@ const createMajorQuery = ({
   return esQuery;
 }
 
-const createCurriculumQuery = ({
-  q = "",
-  size = 10,
-  start = 0
-}) => {
-  const esQuery = {
-    from: start || 0,
-    size: size || 10,
-  };
-  addMust(esQuery, {
-    "query_string": {
-      "query": `*${q}*`,
-      "default_operator": "AND",
-      "fields": ["name", "curriculumCode"]
-    }
-  });
-  esQuery.sort = [{
-    "name.keyword": {
-      "order": "asc"
-    }
-  }]
-  return esQuery;
-}
-
 module.exports = {
   create,
   update,
@@ -265,5 +241,4 @@ module.exports = {
   createSchoolQuery,
   createFacultyQuery,
   createMajorQuery,
-  createCurriculumQuery
 }

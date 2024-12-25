@@ -31,29 +31,6 @@ module.exports = () => ({
     }
     return arr;
   },
-  getCurriculaIndex: async ({batchSize = 500}) => {
-    let isNext = true;
-    let page = 1;
-    let arr = [];
-    while (isNext) {
-      const res = await strapi.services['api::curriculum-curriculum.curriculum-curriculum'].find({
-        pagination: { page, pageSize: batchSize },
-        populate: {
-          "curriculum_major": "*"
-        }
-      });
-      
-      for (const item of res.results) {
-        item.major = item.curriculum_major;
-        delete item?.curriculum_major;
-      }
-      
-      arr = arr.concat(res.results);
-      isNext = res.pagination.page < res.pagination.pageCount;
-      page++;
-    }
-    return arr;
-  },
   getSchoolsIndex: async ({batchSize = 500}) => {
     let isNext = true;
     let page = 1;

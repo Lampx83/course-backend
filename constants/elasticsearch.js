@@ -2,7 +2,6 @@ const ELSATICSEARCH_INDEXES = {
   schools: 'schools_courses',
   faculties: 'faculties_courses',
   majors: 'majors_courses',
-  curricula: 'curricula_courses',
   subjects: 'subjects_courses',
 }
 

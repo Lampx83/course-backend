@@ -19,19 +19,6 @@ module.exports = {
       const { q, start = 0, size = 10 } = ctx.query;
       let res = [];
       
-      const curriculums = await esClient.search({
-        index: ELSATICSEARCH_INDEXES.curricula,
-        body: createCurriculumQuery({q, start, size})
-      });
-      res = res.concat(curriculums?.body?.hits?.hits?.map(hit => ({
-        type: "curriculum",
-        ...hit._source
-      })) || []);
-      
-      if (res.length >= size) {
-        return res;
-      }
-      
       const majors = await esClient.search({
         index: ELSATICSEARCH_INDEXES.majors,
         body: createMajorQuery({q, start, size: size - res.length})
@@ -88,7 +75,6 @@ module.exports = {
       const schoolsData = await strapi.services["api::search.search"].getSchoolsIndex({batchSize});
       const facultiesData = await strapi.services["api::search.search"].getFacultiesIndex({batchSize});
       const majorsData = await strapi.services["api::search.search"].getMajorsIndex({batchSize});
-      const curriculaData = await strapi.services["api::search.search"].getCurriculaIndex({batchSize});
       const subjectsData = await strapi.services["api::search.search"].getSubjectsIndex({batchSize});
       
       const schoolIndex = await createIndex({
@@ -111,13 +97,6 @@ module.exports = {
         body: majorMapping,
         isUpdate
       });
-
-      const curriculumIndex = await createIndex({
-        index: ELSATICSEARCH_INDEXES.curricula,
-        data: curriculaData,
-        body: curriculumMapping,
-        isUpdate
-      });
       
       const subjectIndex = await createIndex({
         index: ELSATICSEARCH_INDEXES.subjects,
@@ -130,7 +109,6 @@ module.exports = {
         schoolIndex,
         facultyIndex,
         majorIndex,
-        curriculumIndex,
         subjectIndex
       }
       
