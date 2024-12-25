@@ -43,19 +43,19 @@ module.exports = {
       if (res.length >= size) {
         return res;
       }
-      
-      const subjects = await esClient.search({
-        index: ELSATICSEARCH_INDEXES.subjects,
-        body: createSubjectQuery({q, start, size: size - res.length})
+
+      const schools = await esClient.search({
+        index: ELSATICSEARCH_INDEXES.schools,
+        body: createSchoolQuery({q, start, size: size - res.length})
       });
-      res = res.concat(subjects?.body?.hits?.hits?.map(hit => ({
-        type: "subject",
+      res = res.concat(schools?.body?.hits?.hits?.map(hit => ({
+        type: "school",
         ...hit._source
       })) || []);
       if (res.length >= size) {
         return res;
       }
-      
+
       const faculties = await esClient.search({
         index: ELSATICSEARCH_INDEXES.faculties,
         body: createFacultyQuery({q, start, size: size - res.length})
@@ -68,12 +68,12 @@ module.exports = {
         return res;
       }
       
-      const schools = await esClient.search({
-        index: ELSATICSEARCH_INDEXES.schools,
-        body: createSchoolQuery({q, start, size: size - res.length})
+      const subjects = await esClient.search({
+        index: ELSATICSEARCH_INDEXES.subjects,
+        body: createSubjectQuery({q, start, size: size - res.length})
       });
-      res = res.concat(schools?.body?.hits?.hits?.map(hit => ({
-        type: "school",
+      res = res.concat(subjects?.body?.hits?.hits?.map(hit => ({
+        type: "subject",
         ...hit._source
       })) || []);
       
