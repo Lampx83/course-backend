@@ -59,9 +59,9 @@ const count = async (index = "", query) => {
 }
 
 const createIndex = async ({index = "", data = [], body = {}, isUpdate = false}) => {
-  
+
   const BATCH_SIZE = 500;
-  
+
   let checkIndexExist = await esClient.indices.exists({index});
   //reindex == true => delete index
   if (!isUpdate && checkIndexExist?.body) {
@@ -69,7 +69,7 @@ const createIndex = async ({index = "", data = [], body = {}, isUpdate = false})
     checkIndexExist = null;
     console.log(`Index ${index} deleted`);
   }
-  
+
   if (!checkIndexExist?.body || isUpdate) {
     try {
       if (!isUpdate)
@@ -77,7 +77,7 @@ const createIndex = async ({index = "", data = [], body = {}, isUpdate = false})
           index,
           body
         });
-      
+
       if (data && data.length === 0) {
         console.log(`No data found for ${index} index`);
         return;
@@ -118,7 +118,7 @@ const createIndex = async ({index = "", data = [], body = {}, isUpdate = false})
         }
         console.log(`Index ${index} created with ${batch.length} documents`);
       }
-      
+
       return {
         status: true,
         message: `Index ${index} created with ${data.length}`
@@ -132,12 +132,20 @@ const createIndex = async ({index = "", data = [], body = {}, isUpdate = false})
 const createSubjectQuery = ({
   q = "",
   size = 10,
-  start = 0
+  start = 0,
+  locale = "vi"
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
   };
+
+  addMust(esQuery, {
+    "term": {
+      "locale": locale
+    }
+  });
+
   addMust(esQuery, {
     "query_string": {
       "query": `*${q}*`,
@@ -161,12 +169,20 @@ const createSubjectQuery = ({
 const createSchoolQuery = ({
   q = "",
   size = 10,
-  start = 0
+  start = 0,
+  locale = "vi"
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
   };
+
+  addMust(esQuery, {
+    "term": {
+      "locale": locale
+    }
+  });
+
   addMust(esQuery, {
     "query_string": {
       "query": `*${q}*`,
@@ -174,7 +190,7 @@ const createSchoolQuery = ({
       "fields": ["name", "schoolCode"]
     }
   });
-  
+
   esQuery.sort = [{
     "name.keyword": {
       "order": "asc"
@@ -186,12 +202,20 @@ const createSchoolQuery = ({
 const createFacultyQuery = ({
   q = "",
   size = 10,
-  start = 0
+  start = 0,
+  locale = "vi"
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
   };
+
+  addMust(esQuery, {
+    "term": {
+      "locale": locale
+    }
+  });
+
   addMust(esQuery, {
     "query_string": {
       "query": `*${q}*`,
@@ -210,12 +234,20 @@ const createFacultyQuery = ({
 const createMajorQuery = ({
   q = "",
   size = 10,
-  start = 0
+  start = 0,
+  locale = "vi"
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
   };
+
+  addMust(esQuery, {
+    "term": {
+      "locale": locale
+    }
+  });
+
   addMust(esQuery, {
     "query_string": {
       "query": `*${q}*`,
@@ -234,12 +266,20 @@ const createMajorQuery = ({
 const createCurriculumQuery = ({
   q = "",
   size = 10,
-  start = 0
+  start = 0,
+  locale = "vi"
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
   };
+
+  addMust(esQuery, {
+    "term": {
+      "locale": locale
+    }
+  });
+
   addMust(esQuery, {
     "query_string": {
       "query": `*${q}*`,

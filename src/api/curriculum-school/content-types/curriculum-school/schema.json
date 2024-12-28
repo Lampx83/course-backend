@@ -4,7 +4,7 @@
   "info": {
     "singularName": "curriculum-school",
     "pluralName": "curriculum-schools",
-    "displayName": "Curriculum.school",
+    "displayName": "School",
     "description": ""
   },
   "options": {
@@ -30,17 +30,18 @@
         "output": "HTML",
         "preset": "rich"
       },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::ckeditor.CKEditor",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "curriculum_faculties": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::curriculum-faculty.curriculum-faculty",
       "mappedBy": "curriculum_school"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
     },
     "curriculum_majors": {
       "type": "relation",
@@ -64,8 +65,22 @@
         }
       }
     },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
+    },
     "schoolCode": {
-      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
       "required": true
     }
   }

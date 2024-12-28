@@ -16,13 +16,14 @@ const {esClient} = require("../../../helpers/elasticsearch");
 module.exports = {
   search: async (ctx) => {
     try {
-      const { q, start = 0, size = 10 } = ctx.query;
+      const { q, start = 0, size = 10, locale = "vi" } = ctx.query;
       let res = [];
-      
+
       const majors = await esClient.search({
         index: ELSATICSEARCH_INDEXES.majors,
-        body: createMajorQuery({q, start, size: size - res.length})
+        body: createMajorQuery({q, start, size: size - res.length, locale})
       });
+
       res = res.concat(majors?.body?.hits?.hits?.map(hit => ({
         type: "major",
         ...hit._source
@@ -33,7 +34,7 @@ module.exports = {
 
       const schools = await esClient.search({
         index: ELSATICSEARCH_INDEXES.schools,
-        body: createSchoolQuery({q, start, size: size - res.length})
+        body: createSchoolQuery({q, start, size: size - res.length, locale})
       });
       res = res.concat(schools?.body?.hits?.hits?.map(hit => ({
         type: "school",
@@ -45,7 +46,7 @@ module.exports = {
 
       const faculties = await esClient.search({
         index: ELSATICSEARCH_INDEXES.faculties,
-        body: createFacultyQuery({q, start, size: size - res.length})
+        body: createFacultyQuery({q, start, size: size - res.length, locale})
       });
       res = res.concat(faculties?.body?.hits?.hits?.map(hit => ({
         type: "faculty",
@@ -54,16 +55,16 @@ module.exports = {
       if (res.length >= size) {
         return res;
       }
-      
+
       const subjects = await esClient.search({
         index: ELSATICSEARCH_INDEXES.subjects,
-        body: createSubjectQuery({q, start, size: size - res.length})
+        body: createSubjectQuery({q, start, size: size - res.length, locale})
       });
       res = res.concat(subjects?.body?.hits?.hits?.map(hit => ({
         type: "subject",
         ...hit._source
       })) || []);
-      
+
       return res;
     } catch (err) {
       return err;
@@ -98,21 +99,21 @@ module.exports = {
         body: majorMapping,
         isUpdate
       });
-      
+
       const subjectIndex = await createIndex({
         index: ELSATICSEARCH_INDEXES.subjects,
         data: subjectsData,
         body: subjectMapping,
         isUpdate
       });
-      
+
       const curriculumIndex = await createIndex({
         index: ELSATICSEARCH_INDEXES.curriculums,
         data: curriculumsData,
         body: curriculumMapping,
         isUpdate
       });
-      
+
       return {
         schoolIndex,
         facultyIndex,
@@ -120,16 +121,16 @@ module.exports = {
         curriculumIndex,
         subjectIndex
       }
-      
+
     } catch (err) {
       return err;
     }
   },
   searchCurriculum: async (ctx) => {
-    const {q, start = 0, size = 10} = ctx.query;
+    const {q, start = 0, size = 10, locale = "vi"} = ctx.query;
     const res = await esClient.search({
       index: ELSATICSEARCH_INDEXES.curriculums,
-      body: createCurriculumQuery({q, start, size})
+      body: createCurriculumQuery({q, start, size, locale})
     });
     return res.body.hits.hits.map(hit => hit._source);
   }
