@@ -4,7 +4,7 @@
   "info": {
     "singularName": "curriculum-curriculum",
     "pluralName": "curriculum-curricula",
-    "displayName": "Curriculum.Curriculum",
+    "displayName": "Curriculum",
     "description": ""
   },
   "options": {
@@ -45,12 +45,20 @@
       }
     },
     "curriculumCode": {
-      "type": "uid",
-      "required": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "name",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
       "required": true
     }
   }

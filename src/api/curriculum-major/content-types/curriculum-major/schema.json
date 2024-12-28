@@ -4,7 +4,7 @@
   "info": {
     "singularName": "curriculum-major",
     "pluralName": "curriculum-majors",
-    "displayName": "Curriculum.major",
+    "displayName": "Major",
     "description": ""
   },
   "options": {
@@ -24,30 +24,11 @@
         }
       }
     },
-    "majorCode": {
-      "type": "uid"
-    },
-    "admissionCode": {
-      "type": "uid"
-    },
     "enrollmentTarget": {
       "type": "integer",
       "pluginOptions": {
         "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "thumbnails": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -57,7 +38,12 @@
         "output": "HTML",
         "preset": "rich"
       },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::ckeditor.CKEditor",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "graduateOutcomes": {
       "type": "customField",
@@ -65,7 +51,12 @@
         "output": "HTML",
         "preset": "rich"
       },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::ckeditor.CKEditor",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "careerOpportunities": {
       "type": "customField",
@@ -73,16 +64,7 @@
         "output": "HTML",
         "preset": "rich"
       },
-      "customField": "plugin::ckeditor.CKEditor"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
-    },
-    "syllabuses": {
-      "type": "component",
-      "repeatable": true,
-      "component": "major.syllabus",
+      "customField": "plugin::ckeditor.CKEditor",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -105,7 +87,7 @@
       "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
@@ -114,6 +96,32 @@
       "relation": "oneToMany",
       "target": "api::curriculum-curriculum.curriculum-curriculum",
       "mappedBy": "curriculum_major"
+    },
+    "majorCode": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": false
+    },
+    "admissionCode": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }
