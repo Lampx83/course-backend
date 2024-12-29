@@ -31,6 +31,12 @@
             "html_strip"
           ]
         }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": ["lowercase"]
+        }
       }
     }
   },
@@ -269,7 +275,17 @@
         }
       },
       "subjectCode" : {
-        "type" : "keyword"
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "text_default"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "theoryLessons" : {
         "type" : "long"

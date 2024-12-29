@@ -31,6 +31,12 @@
             "html_strip"
           ]
         }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": ["lowercase"]
+        }
       }
     }
   },
@@ -56,256 +62,276 @@
       }
     ],
     "properties": {
-      "admissionCode" : {
-        "type" : "keyword"
-      },
-      "careerOpportunities" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "admissionCode": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "text_default"
+          },
+          "keyword": {
+            "type": "keyword"
           }
         }
       },
-      "createdAt" : {
-        "type" : "date"
-      },
-      "credits" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "careerOpportunities": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
         }
       },
-      "curriculum_faculty" : {
-        "properties" : {
-          "addressContactFaculty" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "createdAt" : {
-            "type" : "date"
-          },
-          "description" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "facultyCode" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "id" : {
-            "type" : "long"
-          },
-          "locale" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "mailContact" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "name" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "phoneNumberContact" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "publishedAt" : {
-            "type" : "date"
-          },
-          "slug" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
-          },
-          "updatedAt" : {
-            "type" : "date"
-          },
-          "websiteFacultyUrl" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
-              }
-            }
+      "createdAt": {
+        "type": "date"
+      },
+      "credits": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
         }
       },
-      "curriculum_school" : {
-        "properties" : {
-          "address" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+      "curriculum_faculty": {
+        "properties": {
+          "addressContactFaculty": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "createdAt" : {
-            "type" : "date"
+          "createdAt": {
+            "type": "date"
           },
-          "description" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "description": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "id" : {
-            "type" : "long"
-          },
-          "locale" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "facultyCode": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "name" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "id": {
+            "type": "long"
+          },
+          "locale": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "publishedAt" : {
-            "type" : "date"
-          },
-          "schoolCode" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "mailContact": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "slug" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           },
-          "updatedAt" : {
-            "type" : "date"
+          "phoneNumberContact": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           },
-          "website" : {
-            "type" : "text",
-            "fields" : {
-              "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256
+          "publishedAt": {
+            "type": "date"
+          },
+          "slug": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "updatedAt": {
+            "type": "date"
+          },
+          "websiteFacultyUrl": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
               }
             }
           }
         }
       },
-      "enrollmentTarget" : {
-        "type" : "long"
-      },
-      "graduateOutcomes" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "curriculum_school": {
+        "properties": {
+          "address": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "createdAt": {
+            "type": "date"
+          },
+          "description": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "id": {
+            "type": "long"
+          },
+          "locale": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "publishedAt": {
+            "type": "date"
+          },
+          "schoolCode": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "slug": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "updatedAt": {
+            "type": "date"
+          },
+          "website": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       },
-      "id" : {
-        "type" : "long"
+      "enrollmentTarget": {
+        "type": "long"
       },
-      "introduction" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "graduateOutcomes": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
         }
       },
-      "locale" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "id": {
+        "type": "long"
+      },
+      "introduction": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
         }
       },
-      "majorCode" : {
-        "type" : "keyword"
-      },
-      "publishedAt" : {
-        "type" : "date"
-      },
-      "slug" : {
-        "type" : "text",
-        "fields" : {
-          "keyword" : {
-            "type" : "keyword",
-            "ignore_above" : 256
+      "locale": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
         }
       },
-      "updatedAt" : {
-        "type" : "date"
+      "majorCode": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "text_default"
+          },
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "publishedAt": {
+        "type": "date"
+      },
+      "slug": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "updatedAt": {
+        "type": "date"
       }
     }
   }

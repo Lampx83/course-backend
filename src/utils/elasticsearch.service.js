@@ -1,5 +1,5 @@
 const {esClient} = require("../helpers/elasticsearch");
-const {addMust} = require("./elasticsearch");
+const {addMust, addShould} = require("./elasticsearch");
 const {addSort} = require("../helpers/notion");
 
 const create = async (index = "", id = "", body = {}) => {
@@ -248,18 +248,28 @@ const createMajorQuery = ({
     }
   });
 
-  addMust(esQuery, {
+  addShould(esQuery, {
     "query_string": {
       "query": `*${q}*`,
       "default_operator": "AND",
-      "fields": ["name", "majorCode", "admissionCode"]
-    }
+      "fields": ["name", "majorCode^2", "admissionCode^3"]
+    },
   });
-  esQuery.sort = [{
-    "name.keyword": {
-      "order": "asc"
-    }
-  }]
+
+  esQuery.query.bool.minimum_should_match = 1;
+
+  esQuery.sort = [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    },
+    {
+      "admissionCode.keyword": {
+        "order": "asc"
+      }
+    },
+  ]
   return esQuery;
 }
 
