@@ -252,7 +252,7 @@ const createMajorQuery = ({
     "query_string": {
       "query": `*${q}*`,
       "default_operator": "AND",
-      "fields": ["name", "majorCode"]
+      "fields": ["name", "majorCode", "admissionCode"]
     }
   });
   esQuery.sort = [{
