@@ -103,7 +103,8 @@ module.exports = () => ({
           pagination: {page, pageSize: batchSize},
           populate: {
             "curriculum_faculty": "*",
-            "curriculum_school": "*"
+            "curriculum_school": "*",
+            "localizations": "*"
           },
           locale
         });
