@@ -133,5 +133,13 @@ module.exports = {
       body: createCurriculumQuery({q, start, size, locale})
     });
     return res.body.hits.hits.map(hit => hit._source);
+  },
+  searchMajor: async (ctx) => {
+    const {q, start = 0, size = 10, locale = "vi"} = ctx.query;
+    const res = await esClient.search({
+      index: ELSATICSEARCH_INDEXES.majors,
+      body: createMajorQuery({q, start, size, locale})
+    });
+    return res.body.hits.hits.map(hit => hit._source);
   }
 };

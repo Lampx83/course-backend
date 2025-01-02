@@ -27,5 +27,14 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: 'GET',
+      path: '/search/major',
+      handler: 'search.searchMajor',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
