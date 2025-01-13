@@ -60,6 +60,25 @@
       },
       "type": "string",
       "required": true
+    },
+    "active": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "credits": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

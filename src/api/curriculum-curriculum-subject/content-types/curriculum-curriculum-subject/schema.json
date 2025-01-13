@@ -71,6 +71,18 @@
       },
       "type": "integer",
       "required": false
+    },
+    "language": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "vi",
+        "en"
+      ]
     }
   }
 }
