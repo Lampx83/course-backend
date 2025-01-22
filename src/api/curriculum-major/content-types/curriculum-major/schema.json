@@ -132,6 +132,14 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "altLink": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }
