@@ -79,6 +79,14 @@
       },
       "type": "string",
       "required": false
+    },
+    "altLink": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }
