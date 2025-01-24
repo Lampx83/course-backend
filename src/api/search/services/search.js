@@ -104,10 +104,17 @@ module.exports = () => ({
           populate: {
             "curriculum_faculty": "*",
             "curriculum_school": "*",
-            "localizations": "*"
+            "localizations": "*",
+            "curriculum_curricula": "*"
           },
           locale
         });
+
+        for (const item of res.results) {
+          const curricula = item.curriculum_curricula.sort((a, b) => b.year.localeCompare(a.year));
+          item.altLink = curricula[0]?.altLink;
+        }
+
         arr = arr.concat(res.results);
         isNext = res.pagination.page < res.pagination.pageCount;
         page++;
