@@ -143,6 +143,7 @@ module.exports = () => ({
 
         for (const item of res.results) {
           item.major = item.curriculum_major;
+          item.name = item.major?.name + " " + item.year;
           delete item?.curriculum_major;
         }
 
