@@ -141,5 +141,13 @@ module.exports = {
       body: createMajorQuery({q, start, size, locale})
     });
     return res.body.hits.hits.map(hit => hit._source);
+  },
+  searchSubject: async (ctx) => {
+    const {q, start = 0, size = 10, locale = "vi"} = ctx.query;
+    const res = await esClient.search({
+      index: ELSATICSEARCH_INDEXES.subjects,
+      body: createSubjectQuery({q, start, size, locale})
+    });
+    return res.body.hits.hits.map(hit => hit._source);
   }
 };

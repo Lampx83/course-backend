@@ -36,5 +36,14 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: 'GET',
+      path: '/search/subject',
+      handler: 'search.searchSubject',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
