@@ -141,6 +141,19 @@ const createSubjectQuery = ({
     size: size || 10,
   };
 
+  if (year) {
+    esQuery.query = {
+      "nested": {
+        "path": "curriculums",
+        "query": {
+          "match": {
+            "curriculums.year": year
+          }
+        }
+      }
+    }
+  }
+
   addMust(esQuery, {
     "term": {
       "locale": locale
