@@ -78,6 +78,7 @@
         }
       },
       "curriculums" : {
+        "type": "nested",
         "properties" : {
           "createdAt" : {
             "type" : "date"

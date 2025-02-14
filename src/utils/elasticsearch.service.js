@@ -133,7 +133,8 @@ const createSubjectQuery = ({
   q = "",
   size = 10,
   start = 0,
-  locale = "vi"
+  locale = "vi",
+  year
 }) => {
   const esQuery = {
     from: start || 0,
