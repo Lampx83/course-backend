@@ -146,8 +146,13 @@ module.exports = {
     const {q, year, start = 0, size = 10, locale = "vi"} = ctx.query;
     const res = await esClient.search({
       index: ELSATICSEARCH_INDEXES.subjects,
-      body: createSubjectQuery({q, start, size, locale}, year)
+      body: createSubjectQuery({q, start, size, locale, year})
     });
-    return res.body.hits.hits.map(hit => hit._source);
+    return {
+      data: res.body.hits.hits.map(hit => hit._source),
+      start: start,
+      size: res.body.hits.hits.length,
+      total: res.body.hits.total.value,
+    };
   }
 };
