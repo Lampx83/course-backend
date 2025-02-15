@@ -148,12 +148,11 @@ module.exports = {
       index: ELSATICSEARCH_INDEXES.subjects,
       body: createSubjectQuery({q, start, size, locale, year})
     });
-    // return {
-    //   data: res.body.hits.hits.map(hit => hit._source),
-    //   start: start,
-    //   size: res.body.hits.hits.length,
-    //   total: res.body.hits.total.value,
-    // };
-    return res.body.hits.hits.map(hit => hit._source)
+    return {
+      data: res.body.hits.hits.map(hit => hit._source),
+      size: res.body.hits.hits.length,
+      total: res.body.hits.total.value,
+      page: Math.floor(start / size) + 1,
+    };
   }
 };

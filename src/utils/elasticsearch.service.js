@@ -142,7 +142,7 @@ const createSubjectQuery = ({
   };
 
   if (year) {
-    esQuery.query = {
+    addMust(esQuery, {
       "nested": {
         "path": "curriculums",
         "query": {
@@ -151,7 +151,7 @@ const createSubjectQuery = ({
           }
         }
       }
-    }
+    })
   }
 
   addMust(esQuery, {
