@@ -141,7 +141,7 @@ const createSubjectQuery = ({
     from: start || 0,
     size: size || 10,
     "_source": {
-      "excludes": lite ? ["curriculums"] : []
+      "excludes": (lite !== false && lite !== "false") ? ["curriculums"] : []
     }
   };
 
