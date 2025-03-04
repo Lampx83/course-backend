@@ -134,11 +134,15 @@ const createSubjectQuery = ({
   size = 10,
   start = 0,
   locale = "vi",
-  year
+  year,
+  lite = true
 }) => {
   const esQuery = {
     from: start || 0,
     size: size || 10,
+    "_source": {
+      "excludes": lite ? ["curriculums"] : []
+    }
   };
 
   if (year) {

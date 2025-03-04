@@ -143,10 +143,10 @@ module.exports = {
     return res.body.hits.hits.map(hit => hit._source);
   },
   searchSubject: async (ctx) => {
-    const {q, year, start = 0, size = 10, locale = "vi"} = ctx.query;
+    const {q, lite = true, year, start = 0, size = 10, locale = "vi"} = ctx.query;
     const res = await esClient.search({
       index: ELSATICSEARCH_INDEXES.subjects,
-      body: createSubjectQuery({q, start, size, locale, year})
+      body: createSubjectQuery({q, start, size, locale, year, lite})
     });
     return {
       data: res.body.hits.hits.map(hit => hit._source),
