@@ -58,7 +58,7 @@ module.exports = {
 
       const subjects = await esClient.search({
         index: ELSATICSEARCH_INDEXES.subjects,
-        body: createSubjectQuery({q, start, size: size - res.length, locale})
+        body: createSubjectQuery({q, start, size: size - res.length, locale, lite: false})
       });
       res = res.concat(subjects?.body?.hits?.hits?.map(hit => ({
         type: "subject",
