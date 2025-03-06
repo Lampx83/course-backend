@@ -6,4 +6,8 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::curriculum-curriculum.curriculum-curriculum');
+module.exports = createCoreController('api::curriculum-curriculum.curriculum-curriculum', ({strapi}) => ({
+  async getYears(ctx) {
+    return await strapi.services['api::curriculum-curriculum.curriculum-curriculum'].getYears(ctx.query);
+  }
+}));
