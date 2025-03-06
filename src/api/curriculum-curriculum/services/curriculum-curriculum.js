@@ -16,7 +16,7 @@ module.exports = createCoreService('api::curriculum-curriculum.curriculum-curric
         if (err) {
           return reject(err);
         }
-        const years = rows.map(row => row.year).filter(year => !!year);
+        const years = rows.map(row => row.year).filter(year => !!year).sort((a, b) => b.year.localeCompare(a.year));
         resolve(years);
       });
     });
