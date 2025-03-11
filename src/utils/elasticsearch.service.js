@@ -158,11 +158,24 @@ const createSubjectQuery = ({
     })
   }
 
-  addMust(esQuery, {
-    "term": {
-      "locale": locale
-    }
-  });
+  if (locale === "all") {
+    addShould(esQuery, {
+      "term": {
+        "locale": "vi"
+      }
+    });
+    addShould(esQuery, {
+      "term": {
+        "locale": "en"
+      }
+    });
+  } else if (locale) {
+    addMust(esQuery, {
+      "term": {
+        "locale": locale
+      }
+    });
+  }
 
   addMust(esQuery, {
     "query_string": {
