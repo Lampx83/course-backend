@@ -34,7 +34,7 @@ module.exports = [
       contentSecurityPolicy: {
         directives: {
           'default-src': ["'self'", 'http:'],
-          'connect-src': ["'self'", 'http://101.96.66.219:8015', 'https://fit.neu.edu.vn', 'http://fit.neu.edu.vn'],
+          'connect-src': ["'self'", 'http://203.113.132.48:8010'],
           'img-src': ["'self'", 'data:', 'blob:'],
           'media-src': ["'self'", 'data:', 'blob:'],
           'frame-ancestors': ["'self'"],
